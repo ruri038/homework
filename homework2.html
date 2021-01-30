@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>나홀로 쇼핑몰</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--   부트스트랩 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <!--    구글폰트-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet">
+
+        <!--    스타일 -->
+        <style type="text/css">
+            * {
+                font-family: 'Sunflower', sans-serif;
+            }
+
+            .wrap {
+                width: 800px;
+                margin: auto;
+            }
+
+            .img {
+                background-image: url('https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/41269116_1954357267957302_8297948790933946368_n.jpg?_nc_cat=103&ccb=2&_nc_sid=9267fe&_nc_ohc=9XhmISWmA3gAX-Z2Vkc&_nc_ht=scontent-ssn1-1.xx&oh=8e8be86a5232e495315bfba2d0a53e09&oe=6023148F');
+                background-size: cover;
+                background-position: center;
+                width: 800px;
+                height: 600px;
+                border-radius: 20px 20px 20px 20px
+            }
+
+            .info {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            h1, h5 {
+                display: inline;
+            }
+
+            .order {
+                text-align: center;
+            }
+
+            .orders {
+                margin-top: 10px;
+            }
+
+            .discount {
+                color: red;
+            }
+        </style>
+
+        <!--    주문창 자바스크립트 function 기능-->
+        <script>
+            function order() {
+                alert('주문이 완료되었습니다.');
+            }
+
+            function button() {
+                alert('쿠폰이 지급되었습니다.')
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="wrap">
+            <!--    이미지 넣기-->
+            <div class="img"></div>
+            <div class="info">
+                <!--    상품명 -->
+                <h1>샴푸바 순상고 두피 샴푸</h1>
+                <br/>
+                <!--    가격 안내 -->
+                <h5>정가 16,000원</h5>
+                <h3>판매가 12,800원 <span class="discount">(20% 할인)</span>
+                    <button onclick="button()" type="button" class="btn btn-danger">할인쿠폰 받기</button>
+                </h3>
+                <!--    상품 안내 -->
+                <p>10여년 문헌연구와 테스트로 완성된 청열본초 레시피 함유. 두피 클렌징과 영양공급, 모근과 모발 관리를 한번에 할 수 있는 샴푸바
+                </p>
+
+                <!--    주문 창 -->
+                <div class="orders">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">주문자 이름</span>
+                        </div>
+                        <input type="text" class="form-control" id="order-name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">수량</label>
+                        </div>
+                        <select class="custom-select" id="order-count">
+                            <option selected value=""> -- 수량을 선택하세요 --</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">주소</span>
+                        </div>
+                        <input type="text" class="form-control" id="order-address">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">전화번호</span>
+                        </div>
+                        <input type="text" class="form-control" id="order-phone">
+                    </div>
+                    <div class="order">
+                        <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
